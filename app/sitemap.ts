@@ -24,6 +24,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const kennisPages = [
+    'kosten-dakrenovatie-limburg',
+    'dakrenovatie-premie-limburg',
+    'epdm-of-pvc-plat-dak',
+  ].map((slug) => ({
+    url: `${baseUrl}/kennis/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -33,6 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...cityPages,
     ...dienstPages,
+    {
+      url: `${baseUrl}/kennis`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    ...kennisPages,
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),

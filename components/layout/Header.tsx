@@ -12,6 +12,7 @@ import { cn } from '@/lib/utils';
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Diensten', href: '/diensten' },
+  { label: 'Kennis', href: '/kennis' },
   { label: 'Over Ons', href: '/over-ons' },
   { label: 'Contact', href: '/contact' },
 ];

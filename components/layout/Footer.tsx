@@ -63,6 +63,26 @@ function Footer() {
 
           <div>
             <h3 className="text-accent font-bold text-sm uppercase tracking-wider mb-4">
+              Kenniscentrum
+            </h3>
+            <ul className="space-y-2 mb-6">
+              <li>
+                <Link href="/kennis/kosten-dakrenovatie-limburg" className="text-blue-200 text-sm hover:text-white transition-colors">
+                  Kosten dakrenovatie 2025
+                </Link>
+              </li>
+              <li>
+                <Link href="/kennis/dakrenovatie-premie-limburg" className="text-blue-200 text-sm hover:text-white transition-colors">
+                  Premies Limburg 2025
+                </Link>
+              </li>
+              <li>
+                <Link href="/kennis/epdm-of-pvc-plat-dak" className="text-blue-200 text-sm hover:text-white transition-colors">
+                  EPDM of PVC plat dak
+                </Link>
+              </li>
+            </ul>
+            <h3 className="text-accent font-bold text-sm uppercase tracking-wider mb-4">
               Werkgebied
             </h3>
             <ul className="space-y-2">
