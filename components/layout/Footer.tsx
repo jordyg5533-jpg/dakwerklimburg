@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
 import { useOfferteModal } from '@/components/providers/OfferteModalProvider';
 import { cities } from '@/lib/cities';
@@ -13,9 +14,14 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div>
-            <Link href="/" className="text-xl font-bold">
-              <span className="text-white">Dakwerk </span>
-              <span className="text-accent">Limburg</span>
+            <Link href="/" className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">
+              <Image
+                src="/logo-white.svg"
+                alt="Dakwerk Limburg"
+                width={200}
+                height={72}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-blue-200 text-sm mt-4 leading-relaxed">
               Betrouwbare dakwerkers in heel Limburg. Wij verbinden u met gecertificeerde vakmensen voor dakrenovatie, plat dak, dakisolatie en goten. Gratis offerte binnen 24 uur.

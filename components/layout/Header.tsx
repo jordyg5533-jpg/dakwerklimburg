@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -54,11 +55,17 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         <Link
           href="/"
-          className="text-xl font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded"
+          className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded"
           aria-label="Dakwerk Limburg — homepagina"
         >
-          <span className="text-primary font-bold">Dakwerk</span>{' '}
-          <span className="text-accent font-bold">Limburg</span>
+          <Image
+            src="/logo.png"
+            alt="Dakwerk Limburg"
+            width={280}
+            height={100}
+            className="h-9 md:h-11 w-auto"
+            priority
+          />
         </Link>
 
         <nav
