@@ -580,6 +580,30 @@ export default function DakisolatiePage() {
         </div>
       </section>
 
+      <section className="py-12 bg-background">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl font-bold text-primary mb-2 text-center">Meer lezen over dakisolatie</h2>
+          <p className="text-sub text-sm text-center mb-6">Handige gidsen over EPC, premies en kosten in Limburg</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              { label: 'EPC verbeteren met dakisolatie', href: '/kennis/epc-verbeteren-dakisolatie' },
+              { label: 'Welke premies zijn er?', href: '/kennis/dakrenovatie-premie-limburg' },
+              { label: 'Wat kost een dakrenovatie?', href: '/kennis/kosten-dakrenovatie-limburg' },
+              { label: 'Wanneer dak vervangen?', href: '/kennis/wanneer-dak-vervangen' },
+            ].map((art) => (
+              <Link
+                key={art.href}
+                href={art.href}
+                className="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-xl hover:border-accent hover:text-accent text-main text-sm font-medium transition-colors"
+              >
+                <span className="text-accent flex-shrink-0">→</span>
+                {art.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="cta" className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
