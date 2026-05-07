@@ -6,6 +6,9 @@ import Link from 'next/link';
 
 type Step = 'welcome' | 'type' | 'stad' | 'contact' | 'sending' | 'success' | 'faq';
 
+const DISMISSED_KEY = 'chat_dismissed';
+const AUTO_OPEN_DELAY = 5000;
+
 const DIENSTEN = [
   { label: 'Dakrenovatie', value: 'dakrenovatie' },
   { label: 'Plat dak', value: 'plat-dak' },
@@ -33,28 +36,31 @@ interface ChatData {
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState<Step>('welcome');
-  const [showBadge, setShowBadge] = useState(false);
   const [data, setData] = useState<ChatData>({ type: '', stad: '', naam: '', telefoon: '' });
   const [errors, setErrors] = useState<Partial<ChatData>>({});
   const stadRef = useRef<HTMLInputElement>(null);
   const naamRef = useRef<HTMLInputElement>(null);
 
-  // Show notification badge after 8 seconds if chat not opened
+  // Auto-open after delay, but only if user hasn't dismissed before
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!open) setShowBadge(true);
-    }, 8000);
+    try {
+      if (sessionStorage.getItem(DISMISSED_KEY)) return;
+    } catch {
+      return;
+    }
+    const timer = setTimeout(() => setOpen(true), AUTO_OPEN_DELAY);
     return () => clearTimeout(timer);
-  }, [open]);
+  }, []);
 
-  const handleOpen = () => {
-    setOpen(true);
-    setShowBadge(false);
-  };
-
+  // Closing always marks as dismissed — never auto-reopens in this session
   const handleClose = () => {
     setOpen(false);
+    try {
+      sessionStorage.setItem(DISMISSED_KEY, '1');
+    } catch {}
   };
+
+  const handleOpen = () => setOpen(true);
 
   const handleReset = () => {
     setStep('welcome');
@@ -122,7 +128,7 @@ export default function ChatWidget() {
       {/* Chat panel */}
       {open && (
         <div
-          className="fixed bottom-36 right-4 md:bottom-28 md:right-6 z-50 w-[calc(100vw-2rem)] max-w-sm bg-white rounded-2xl shadow-2xl border border-gray-100 flex flex-col overflow-hidden"
+          className="fixed bottom-36 right-4 md:bottom-24 md:right-6 z-50 w-[calc(100vw-2rem)] max-w-sm bg-white rounded-2xl shadow-2xl border border-gray-100 flex flex-col overflow-hidden"
           style={{ maxHeight: '520px' }}
         >
           {/* Header */}
@@ -148,12 +154,9 @@ export default function ChatWidget() {
           {/* Body */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
 
-            {/* Welcome */}
             {step === 'welcome' && (
               <>
-                <BotMessage>
-                  Hallo! Waarmee kan ik u helpen?
-                </BotMessage>
+                <BotMessage>Hallo! Waarmee kan ik u helpen?</BotMessage>
                 <div className="flex flex-col gap-2">
                   <OptionButton onClick={() => setStep('type')}>
                     📋 Gratis offerte aanvragen
@@ -165,12 +168,9 @@ export default function ChatWidget() {
               </>
             )}
 
-            {/* Type selectie */}
             {step === 'type' && (
               <>
-                <BotMessage>
-                  Welk type dakwerk heeft u nodig?
-                </BotMessage>
+                <BotMessage>Welk type dakwerk heeft u nodig?</BotMessage>
                 <div className="flex flex-col gap-2">
                   {DIENSTEN.map((d) => (
                     <OptionButton key={d.value} onClick={() => handleTypeSelect(d.value)}>
@@ -182,12 +182,9 @@ export default function ChatWidget() {
               </>
             )}
 
-            {/* Stad */}
             {step === 'stad' && (
               <>
-                <BotMessage>
-                  In welke gemeente bent u gelegen?
-                </BotMessage>
+                <BotMessage>In welke gemeente bent u gelegen?</BotMessage>
                 <div className="space-y-2">
                   <input
                     ref={stadRef}
@@ -210,7 +207,6 @@ export default function ChatWidget() {
               </>
             )}
 
-            {/* Contact */}
             {step === 'contact' && (
               <>
                 <BotMessage>
@@ -251,7 +247,6 @@ export default function ChatWidget() {
               </>
             )}
 
-            {/* Sending */}
             {step === 'sending' && (
               <div className="flex flex-col items-center justify-center py-8 gap-3">
                 <Loader2 className="h-8 w-8 text-accent animate-spin" />
@@ -259,7 +254,6 @@ export default function ChatWidget() {
               </div>
             )}
 
-            {/* Success */}
             {step === 'success' && (
               <>
                 <div className="flex flex-col items-center text-center py-4 gap-3">
@@ -278,12 +272,9 @@ export default function ChatWidget() {
               </>
             )}
 
-            {/* FAQ */}
             {step === 'faq' && (
               <>
-                <BotMessage>
-                  Hier zijn onze meest gestelde vragen:
-                </BotMessage>
+                <BotMessage>Hier zijn onze meest gestelde vragen:</BotMessage>
                 <div className="flex flex-col gap-2">
                   {FAQ_LINKS.map((link) => (
                     <Link
@@ -309,21 +300,16 @@ export default function ChatWidget() {
         </div>
       )}
 
-      {/* Trigger button */}
+      {/* Trigger button — always visible so user can reopen */}
       <button
         onClick={open ? handleClose : handleOpen}
         aria-label={open ? 'Chat sluiten' : 'Chat openen'}
-        className="fixed bottom-36 right-4 md:bottom-28 md:right-6 z-50 h-14 w-14 md:h-16 md:w-16 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center justify-center"
+        className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 h-14 w-14 md:h-16 md:w-16 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-200 flex items-center justify-center"
       >
         {open ? (
           <X className="h-6 w-6 text-white" />
         ) : (
           <MessageSquare className="h-6 w-6 text-white" />
-        )}
-        {showBadge && !open && (
-          <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 rounded-full flex items-center justify-center">
-            <span className="text-white text-[10px] font-bold">1</span>
-          </span>
         )}
       </button>
     </>
