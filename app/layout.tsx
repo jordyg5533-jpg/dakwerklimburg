@@ -6,6 +6,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import MobileBottomBar from '@/components/layout/MobileBottomBar';
 import WhatsAppFloatingButton from '@/components/layout/WhatsAppFloatingButton';
+import ChatWidget from '@/components/layout/ChatWidget';
 import OfferteModalProvider from '@/components/providers/OfferteModalProvider';
 import CookieBanner from '@/components/CookieBanner';
 
@@ -126,6 +127,7 @@ export default function RootLayout({
           <CookieBanner />
           <MobileBottomBar />
           <WhatsAppFloatingButton />
+          <ChatWidget />
         </OfferteModalProvider>
       </body>
     </html>
