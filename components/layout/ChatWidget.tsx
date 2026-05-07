@@ -139,7 +139,7 @@ export default function ChatWidget() {
               </div>
               <div>
                 <p className="text-white font-bold text-sm">Dakwerk Limburg</p>
-                <p className="text-blue-300 text-xs">Antwoord binnen 24u</p>
+                <p className="text-blue-300 text-xs">● Antwoordt meteen</p>
               </div>
             </div>
             <button
