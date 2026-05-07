@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'kosten-dakrenovatie-limburg',
     'dakrenovatie-premie-limburg',
     'epdm-of-pvc-plat-dak',
+    'hoe-herken-je-een-daklek',
+    'wanneer-dak-vervangen',
+    'asbest-dak-vervangen-limburg',
+    'epc-verbeteren-dakisolatie',
+    'plat-dak-herstellen-of-vervangen',
+    'leien-dak-levensduur-kosten',
   ].map((slug) => ({
     url: `${baseUrl}/kennis/${slug}`,
     lastModified: new Date(),
