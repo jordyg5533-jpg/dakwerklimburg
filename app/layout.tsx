@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     images: ['https://i.postimg.cc/rstDYfLf/dakrenovatie-hero.jpg'],
   },
   icons: {
-    icon: '/icon.svg',
-    apple: '/apple-touch-icon.png',
+    icon: '/icon.png',
+    apple: '/icon.png',
   },
   verification: {
     google: 'o3rSaw8fv4CGl-EmvCbVnL5yWtq7K_7toPVSuZ5pcuQ',

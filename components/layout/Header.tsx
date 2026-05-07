@@ -63,7 +63,7 @@ function Header() {
             alt="Dakwerk Limburg"
             width={280}
             height={100}
-            className="h-9 md:h-11 w-auto"
+            className="h-12 md:h-14 w-auto"
             priority
           />
         </Link>
