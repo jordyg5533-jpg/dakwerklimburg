@@ -16,7 +16,7 @@ export default function HeroSection() {
       className="relative text-white min-h-[500px] md:min-h-[700px] overflow-hidden"
     >
       <img
-        src="https://i.postimg.cc/nrQXw3td/homepage-hero.jpg"
+        src="/images/homepage-hero.png"
         alt="Erkende dakwerker plaatst dakisolatie en pannen op een hellend dak in Limburg"
         loading="eager"
         className="absolute inset-0 w-full h-full object-cover object-[center_right]"

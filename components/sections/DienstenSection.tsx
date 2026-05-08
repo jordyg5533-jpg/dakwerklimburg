@@ -27,7 +27,7 @@ const services: Service[] = [
     linkText: 'Meer over dakrenovatie →',
     href: '/diensten/dakrenovatie',
     image: {
-      src: 'https://i.postimg.cc/3NDkbtHn/dakrenovatie-kaart.jpg',
+      src: '/images/dakrenovatie-kaart.png',
       alt: 'Volledige dakrenovatie van een woning in Limburg',
       width: 800,
       height: 533,
@@ -41,7 +41,7 @@ const services: Service[] = [
     linkText: 'Meer over platte daken →',
     href: '/diensten/plat-dak',
     image: {
-      src: 'https://i.postimg.cc/NLqKhRgm/plat-dak-kaart.jpg',
+      src: '/images/plat-dak-kaart.png',
       alt: 'Vakman plaatst EPDM-bedekking op een plat dak',
       width: 800,
       height: 600,
@@ -55,7 +55,7 @@ const services: Service[] = [
     linkText: 'Meer over dakisolatie →',
     href: '/diensten/dakisolatie',
     image: {
-      src: 'https://i.postimg.cc/WzJdf5P7/dakisolatie-kaart.jpg',
+      src: '/images/dakisolatie-kaart.png',
       alt: 'Dakisolatie wordt aangebracht onder de pannen',
       width: 800,
       height: 600,
@@ -69,7 +69,7 @@ const services: Service[] = [
     linkText: 'Meer over goten →',
     href: '/diensten/goten-zinkwerk',
     image: {
-      src: 'https://i.postimg.cc/1XN8YvZM/goten-kaart.jpg',
+      src: '/images/goten-kaart.png',
       alt: 'Nieuwe zinken dakgoot wordt geplaatst langs een dakrand',
       width: 800,
       height: 533,
@@ -83,7 +83,7 @@ const services: Service[] = [
     linkText: 'Meer over stormschade →',
     href: '/diensten/stormschade',
     image: {
-      src: 'https://i.postimg.cc/LhKJdjHj/stormschade-kaart.jpg',
+      src: '/images/stormschade-kaart.png',
       alt: 'Dakwerker herstelt stormschade aan een hellend dak',
       width: 800,
       height: 533,

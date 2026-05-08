@@ -393,7 +393,7 @@ export default function GotenZinkwerkPage() {
               </a>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://i.postimg.cc/1XN8YvZM/goten-kaart.jpg"
+                  src="/images/goten-kaart.png"
                   alt="Nieuwe dakgoot in zink, geplaatst door erkende Limburgse dakwerker"
                   width={800}
                   height={533}

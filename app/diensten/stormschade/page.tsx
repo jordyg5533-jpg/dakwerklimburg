@@ -343,7 +343,7 @@ export default function StormschadePage() {
               </a>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://i.postimg.cc/LhKJdjHj/stormschade-kaart.jpg"
+                  src="/images/stormschade-kaart.png"
                   alt="Dakwerker herstelt stormschade aan een hellend dak in Limburg"
                   width={800}
                   height={533}

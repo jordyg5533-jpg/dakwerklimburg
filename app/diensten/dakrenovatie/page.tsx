@@ -247,7 +247,7 @@ export default function DakrenovatiePage() {
               </p>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://i.postimg.cc/rstDYfLf/dakrenovatie-hero.jpg"
+                  src="/images/dakrenovatie-hero.png"
                   alt="Volledige renovatie van een hellend dak in Limburg in uitvoering"
                   width={1536}
                   height={1024}

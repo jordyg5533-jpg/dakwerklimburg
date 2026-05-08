@@ -279,7 +279,7 @@ export default function DakisolatiePage() {
               </p>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://i.postimg.cc/WzJdf5P7/dakisolatie-kaart.jpg"
+                  src="/images/dakisolatie-kaart.png"
                   alt="Dakisolatie wordt aangebracht onder de pannen op een hellend dak in Limburg"
                   width={800}
                   height={600}

@@ -261,7 +261,7 @@ export default function PlatDakPage() {
               </p>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://i.postimg.cc/NLqKhRgm/plat-dak-kaart.jpg"
+                  src="/images/plat-dak-kaart.png"
                   alt="Vakman plaatst EPDM-bedekking op een plat dak in Limburg"
                   width={800}
                   height={600}

@@ -30,7 +30,7 @@ const DIENSTEN = [
   {
     href: '/diensten/dakrenovatie',
     titel: 'Dakrenovatie',
-    foto: 'https://i.postimg.cc/3NDkbtHn/dakrenovatie-kaart.jpg',
+    foto: '/images/dakrenovatie-kaart.png',
     alt: 'Dakrenovatie van een hellend dak in Limburg',
     omschrijving:
       'Volledige of gedeeltelijke renovatie van hellende daken in Limburg. Vanaf €120/m².',
@@ -38,7 +38,7 @@ const DIENSTEN = [
   {
     href: '/diensten/plat-dak',
     titel: 'Plat Dak',
-    foto: 'https://i.postimg.cc/NLqKhRgm/plat-dak-kaart.jpg',
+    foto: '/images/plat-dak-kaart.png',
     alt: 'Plat dak vernieuwen in EPDM',
     omschrijving:
       'Plat dak vernieuwen in EPDM, bitumen of PVC. Eerlijke prijs en lange garantie.',
@@ -46,7 +46,7 @@ const DIENSTEN = [
   {
     href: '/diensten/dakisolatie',
     titel: 'Dakisolatie',
-    foto: 'https://i.postimg.cc/WzJdf5P7/dakisolatie-kaart.jpg',
+    foto: '/images/dakisolatie-kaart.png',
     alt: 'Dakisolatie aangebracht onder de pannen',
     omschrijving:
       "Dakisolatie met Mijn VerbouwPremie. Tot duizenden euro's premie via Vlaanderen.",
@@ -54,7 +54,7 @@ const DIENSTEN = [
   {
     href: '/diensten/goten-zinkwerk',
     titel: 'Goten & Zinkwerk',
-    foto: 'https://i.postimg.cc/1XN8YvZM/goten-kaart.jpg',
+    foto: '/images/goten-kaart.png',
     alt: 'Nieuwe dakgoten en zinkwerk',
     omschrijving:
       'Nieuwe dakgoten, regenpijpen en zinkwerk. Vanaf €60 per lopende meter.',
@@ -62,7 +62,7 @@ const DIENSTEN = [
   {
     href: '/diensten/stormschade',
     titel: 'Stormschade',
-    foto: 'https://i.postimg.cc/LhKJdjHj/stormschade-kaart.jpg',
+    foto: '/images/stormschade-kaart.png',
     alt: 'Dakwerker herstelt stormschade',
     omschrijving:
       'Snelle herstellingen na storm of acute lekkage. Binnen het uur ter plaatse.',

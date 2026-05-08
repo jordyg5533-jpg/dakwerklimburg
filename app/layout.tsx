@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://i.postimg.cc/rstDYfLf/dakrenovatie-hero.jpg',
+        url: '/images/dakrenovatie-hero.png',
         width: 1536,
         height: 1024,
         alt: 'Erkende dakwerker renoveert een hellend dak in Limburg',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: 'Dakwerk Limburg — Vakkundige Dakwerkers in heel Limburg',
     description:
       'Betrouwbare dakwerkers in Limburg voor dakrenovatie, plat dak, dakisolatie en goten. Gratis offerte binnen 24 uur.',
-    images: ['https://i.postimg.cc/rstDYfLf/dakrenovatie-hero.jpg'],
+    images: ['/images/dakrenovatie-hero.png'],
   },
   icons: {
     icon: '/icon.svg',
@@ -72,8 +72,7 @@ export default function RootLayout({
   return (
     <html lang="nl" className={inter.variable}>
       <head>
-        <link rel="preconnect" href="https://i.postimg.cc" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://i.postimg.cc" />
+
         <script
           id="consent-default"
           dangerouslySetInnerHTML={{

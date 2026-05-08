@@ -85,31 +85,31 @@ const DIENSTEN = [
     href: '/diensten/dakrenovatie',
     titel: 'Dakrenovatie',
     tekst: 'Volledige renovatie of gedeeltelijke vernieuwing van je hellend dak.',
-    img: 'https://i.postimg.cc/3NDkbtHn/dakrenovatie-kaart.jpg',
+    img: '/images/dakrenovatie-kaart.png',
   },
   {
     href: '/diensten/plat-dak',
     titel: 'Plat dak',
     tekst: 'EPDM, bitumen of roofing — plaatsing en herstelling van platte daken.',
-    img: 'https://i.postimg.cc/NLqKhRgm/plat-dak-kaart.jpg',
+    img: '/images/plat-dak-kaart.png',
   },
   {
     href: '/diensten/dakisolatie',
     titel: 'Dakisolatie',
     tekst: 'Isolatie tussen, onder of boven de dakconstructie, met premie-begeleiding.',
-    img: 'https://i.postimg.cc/WzJdf5P7/dakisolatie-kaart.jpg',
+    img: '/images/dakisolatie-kaart.png',
   },
   {
     href: '/diensten/goten-zinkwerk',
     titel: 'Goten en zinkwerk',
     tekst: 'Nieuwe dakgoten, regenpijpen en zinkwerk rond schoorsteen en dakkapel.',
-    img: 'https://i.postimg.cc/1XN8YvZM/goten-kaart.jpg',
+    img: '/images/goten-kaart.png',
   },
   {
     href: '/diensten/stormschade',
     titel: 'Stormschade',
     tekst: 'Snelle noodherstelling bij storm of lekkage — 24/7 bereikbaar.',
-    img: 'https://i.postimg.cc/LhKJdjHj/stormschade-kaart.jpg',
+    img: '/images/stormschade-kaart.png',
   },
 ];
 
@@ -244,7 +244,7 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   '@id': 'https://dakwerklimburg.be/genk#business',
   name: 'Dakwerk Limburg — Dakwerker in Genk',
-  image: 'https://i.postimg.cc/rstDYfLf/dakrenovatie-hero.jpg',
+  image: '/images/dakrenovatie-hero.png',
   description:
     'Erkende lokale dakwerkers in Genk en alle deelgemeenten (Waterschei, Winterslag, Zwartberg, Sledderlo, Bret, Kattevennen, Genk-Zuid). Dakrenovatie, plat dak, dakisolatie, goten en stormschade. Specifieke ervaring met mijn-cités en asbestlei-vervanging. Gratis offerte binnen 24 uur.',
   url: 'https://dakwerklimburg.be/genk',
@@ -379,7 +379,7 @@ export default function GenkPage() {
               </a>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://i.postimg.cc/rstDYfLf/dakrenovatie-hero.jpg"
+                  src="/images/dakrenovatie-hero.png"
                   alt="Erkende dakwerker bezig op een dak in Genk"
                   width={800}
                   height={533}
