@@ -1,10 +1,10 @@
-import { Star, Users, Clock, ShieldCheck, MapPin } from 'lucide-react';
+import { Clock, ShieldCheck, MapPin, Banknote, Award } from 'lucide-react';
 
 const items = [
-  { Icon: Star, number: '4.9/5', label: 'Gemiddelde beoordeling' },
-  { Icon: Users, number: '200+', label: 'Tevreden klanten' },
+  { Icon: ShieldCheck, number: 'Erkend', label: 'Gecertificeerde vakmensen' },
+  { Icon: Award, number: '10 jaar', label: 'Wettelijke aansprakelijkheid' },
   { Icon: Clock, number: '24u', label: 'Reactietijd gegarandeerd' },
-  { Icon: ShieldCheck, number: '100%', label: 'Gecertificeerde vakmensen' },
+  { Icon: Banknote, number: 'Gratis', label: 'Plaatsbezoek & offerte' },
   { Icon: MapPin, number: '8+', label: 'Limburgse steden' },
 ];
 

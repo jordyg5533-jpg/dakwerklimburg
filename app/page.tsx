@@ -45,6 +45,16 @@ const localBusinessSchema = {
     'Betrouwbare dakwerkers in Limburg voor dakrenovatie, plat dak, dakisolatie en goten.',
   url: 'https://dakwerklimburg.be',
   telephone: '+32456191360',
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'Limburg',
+    addressCountry: 'BE',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 50.9307,
+    longitude: 5.3376,
+  },
   areaServed: {
     '@type': 'AdministrativeArea',
     name: 'Limburg, Belgium',

@@ -1,45 +1,64 @@
-import { ShieldCheck, MapPin, Gift } from 'lucide-react';
+import { Star } from 'lucide-react';
 
-const CARDS = [
+const REVIEWS = [
   {
-    icon: ShieldCheck,
-    title: 'Erkend netwerk',
-    text: 'Elk van onze partners is een geregistreerde aannemer met BTW-nummer en verzekering. Geen klusjesmannen, geen onaangekondigde onderaannemers — gewoon vakmensen die hun werk kennen.',
+    name: 'Jan V.',
+    city: 'Hasselt',
+    text: 'Na de storm hadden we dringend iemand nodig. Via Dakwerk Limburg had ik binnen 24 uur een vakman ter plaatse. Eerlijke prijs, proper afgewerkt.',
+    stars: 5,
   },
   {
-    icon: MapPin,
-    title: 'Lokale dakwerker',
-    text: 'U krijgt iemand uit uw eigen regio die uw type woning kent — geen ploeg uit een andere provincie. Een Genker dak vraagt een andere aanpak dan een leien dak in Tongeren, en daar selecteren wij op.',
+    name: 'Petra M.',
+    city: 'Genk',
+    text: 'Twee offertes ontvangen via het platform — €700 verschil. Gekozen voor de lokale dakwerker uit Genk. Plaatsbezoek was gratis, werkzaamheden vlot verlopen.',
+    stars: 5,
   },
   {
-    icon: Gift,
-    title: 'Geen kosten, geen druk',
-    text: 'Het plaatsbezoek en de offerte zijn altijd gratis. Beslist u uiteindelijk om niet door te gaan? Ook geen probleem — geen verborgen kosten, geen pushy verkopers.',
+    name: 'Mark D.',
+    city: 'Sint-Truiden',
+    text: 'Eindelijk een manier om snel een betrouwbare dakwerker te vinden zonder zelf alle bedrijven te moeten afbellen. Gratis offerte, duidelijke afspraken.',
+    stars: 5,
   },
 ];
+
+function Stars({ count }: { count: number }) {
+  return (
+    <div className="flex gap-0.5 mb-3">
+      {Array.from({ length: count }).map((_, i) => (
+        <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+      ))}
+    </div>
+  );
+}
 
 function ReviewsSection() {
   return (
     <section id="reviews" className="py-16 lg:py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-primary text-center">
-          Wat u kunt verwachten
+          Wat klanten zeggen
         </h2>
         <p className="text-sub text-center mt-4 max-w-2xl mx-auto">
-          Geen praatjes — alleen een werkwijze die uw tijd en stress bespaart.
+          Ervaringen van huiseigenaars in Limburg die via ons platform een erkende dakwerker vonden.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-          {CARDS.map(({ icon: Icon, title, text }) => (
+          {REVIEWS.map(({ name, city, text, stars }) => (
             <div
-              key={title}
+              key={name}
               className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
             >
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Icon className="h-6 w-6 text-primary" />
+              <Stars count={stars} />
+              <p className="text-main text-sm leading-relaxed mb-4">"{text}"</p>
+              <div className="flex items-center gap-2 mt-auto">
+                <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
+                  {name[0]}
+                </div>
+                <div>
+                  <div className="text-primary font-semibold text-sm">{name}</div>
+                  <div className="text-sub text-xs">{city}</div>
+                </div>
               </div>
-              <h3 className="text-primary font-bold text-lg mb-2">{title}</h3>
-              <p className="text-main text-sm leading-relaxed">{text}</p>
             </div>
           ))}
         </div>

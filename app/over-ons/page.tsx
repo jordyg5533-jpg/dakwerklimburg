@@ -37,9 +37,9 @@ export default function OverOnsPage() {
           <div className="space-y-6 text-main text-lg leading-relaxed">
             <p>
               Dakwerk Limburg is geen klassiek dakwerkbedrijf — wij zijn een platform dat
-              huiseigenaars in Limburg verbindt met erkende lokale dakwerkers. Op die manier krijg
-              je snel een vakman ter plaatse zonder zelf alle bedrijven in de regio te moeten
-              afgaan.
+              huiseigenaars in Limburg verbindt met erkende lokale dakwerkers. Op die manier
+              krijgt u snel een vakman ter plaatse zonder zelf alle bedrijven in de regio te
+              moeten afgaan.
             </p>
             <p>
               Onze dakwerkers zijn allemaal erkend (Bouwunie, Confederatie Bouw of gelijkwaardig)
@@ -48,8 +48,8 @@ export default function OverOnsPage() {
               losse uitvoerders of zwartwerk.
             </p>
             <p>
-              Voor jou als klant: één aanvraag, gratis inmeting, één duidelijke offerte. Geen
-              tussenpersonen, geen call center, gewoon een vakman uit jouw regio die jouw dak komt
+              Voor u als klant: één aanvraag, gratis plaatsbezoek, één duidelijke offerte. Geen
+              tussenpersonen, geen callcenter — gewoon een vakman uit uw regio die uw dak komt
               bekijken.
             </p>
           </div>

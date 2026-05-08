@@ -1,7 +1,11 @@
 'use client';
 
-import { Check, Phone } from 'lucide-react';
+import { Check, Phone, MessageCircle } from 'lucide-react';
 import LeadForm from '@/components/forms/LeadForm';
+
+const WA_LINK =
+  'https://wa.me/32456191360?text=' +
+  encodeURIComponent('Hallo, ik zou graag een vrijblijvende offerte ontvangen voor dakwerken.');
 
 const TRUST_BULLETS = [
   'Binnen 24u contact',
@@ -44,13 +48,24 @@ export default function HeroSection() {
               ))}
             </ul>
 
-            <a
-              href="tel:+32456191360"
-              className="inline-flex items-center gap-2 mt-10 bg-accent hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-lg transition-colors"
-            >
-              <Phone className="h-5 w-5" />
-              Bel nu +32 456 19 13 60
-            </a>
+            <div className="flex flex-wrap gap-3 mt-10">
+              <a
+                href="tel:+32456191360"
+                className="inline-flex items-center gap-2 bg-accent hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-lg transition-colors"
+              >
+                <Phone className="h-5 w-5" />
+                Bel nu
+              </a>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-lg transition-colors"
+              >
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp
+              </a>
+            </div>
           </div>
 
           <div className="bg-white rounded-lg shadow-xl p-6 md:p-8">

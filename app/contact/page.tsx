@@ -44,7 +44,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-main text-lg leading-relaxed mb-10 max-w-3xl">
             Bel rechtstreeks, stuur een WhatsApp, mail ons, of vul het formulier in. Binnen 24 uur
-            krijg je contact van een lokale erkende dakwerker uit jouw regio.
+            krijgt u contact van een lokale erkende dakwerker uit uw regio.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-16">

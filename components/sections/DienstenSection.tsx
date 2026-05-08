@@ -95,7 +95,7 @@ const services: Service[] = [
     description:
       'Twijfelt u over de staat van uw dak? Laat het gratis inspecteren door een vakman. U ontvangt een helder rapport met advies en een vrijblijvende offerte.',
     linkText: 'Gratis screening aanvragen →',
-    href: '#',
+    href: '/contact',
   },
 ];
 
